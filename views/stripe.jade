@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= title
+  form(action='/api/stripe/charge', method='POST')
+    script.stripe-button(src='https://checkout.stripe.com/checkout.js', data-key='pk_test_9VDzxalBpfj86BN93H78Tfh3')
+
