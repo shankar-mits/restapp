@@ -2,6 +2,7 @@
 
 var express = require('express');
 var stripe = require('./stripe');
+var crud = require('./crud');
 var api = express.Router();
 
 api.get('/', function(req, res) {
@@ -9,6 +10,7 @@ api.get('/', function(req, res) {
 });
 
 api.use('/stripe', stripe);
+api.use('/crud', crud);
 
 
 module.exports = api;
